@@ -1,0 +1,475 @@
+ <!DOCTYPE html>
+
+<!-- Chat & Notes Area
+
+Hey jacq, kunnen deze comments area gebruiken om notities de delen. handig toch ?
+
+1. use eigen tags
+2. maak appart style sheet 
+3. kijk hoe de pagina load op een mobiel / ipad 'ziet er waardeloos uit op mijn mobiel ...' 
+
+
+
+-->
+
+<html lang="en">
+<head>
+  <title>Scorekaart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+    integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link rel="stylesheet" href="/custom.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <h1>Scorekaart:</h1>
+  <p></p> 
+
+<!-- 
+
+Stel voor dat jij alles begint met bw- (bentwouden) dat krijg je geen duplicates...
+Probleem is echter dat 'card-3' inherited was van een ander en 'bw-wit' is het niet
+--- Dus we kunnen wat weer terug halen 'gewoon uithuilen en opnieuw beginnen'?
+nee hoor, ik bedoel - jij heb card-3 gemaakt toch? waar heb jij dat van gecopieerd? 'weet ik niet meer, wrs. van een website, zelf verzonnen '
+ik heb 't gevonden --- jij heb get can 'card' gekopieerd..... 'heb nu de originele lokaal, zie het inderdaad'
+Nou, het ziet er allemaal nog gezelde uit .... ik ga even de bootstrap laden van CDN, kijk of we iets missen....
+- OH SHIT --- Niets klompt mee ????? Zie jij dat ? 'ja ik zie het' 'toch uithuilen en opnieuw beginnen'
+- NEEEEEEE, dit is juist goed .... laat deze op juow mobiel of ipad ?
+- zag jij dat de lijnen (rows) -- nu wel goed gaat....? 'ja maar lijkt net of hij overal een <hr> tussen heeft'
+- dat <hr> is de padding can card-block .... (DENK IK) ... Dus ik maak even onze eigen
+- ik zit ff de oude weer terug .... okay ? 'de oude wat'? 
+- Hé ziet er nu weer goed uit?  <- dit is de oude style sheet weer.... (hier staat border op 0)
+- ik ga ff bootstrap -v 4 terug doen ... we moeten het maar fixen daaro
+- maar dan kloppen de codes zoals bw-wit enzo ook niet meer .... ik laad alleen de kleur in bw-wit en de rest in bw-card 
+                                                                  ik denk dit is overloading maar weet het niet zeker.....
+-- want denk jij van de eerste twee rows nu ? 'zien er goed uit'
+- waarom verspringt tie bij Speler/Score en Marker/Score? Misschien de h6 opmaak
+  nu beter ?
+  - ja
+
+- er moet padding komen links en rechts... -- ja had ik eerder ook ingesteld, maar'wilde inderdaad ook eerst mobile doen
+- en moet ook kijken of hoe om dat goed te krijgen op een mobile.
+- bootstrap gaat uit van mobile first toch?
+- jaaah, maar ik weet niet persies hoe het werkt. er zijn een boel regels.
+-  1 belangrijk regel is dat je geen px meer gebruik maar em en rem ... 'okay'
+-    em en rem relateer dat aan de font, dus als 
+
+
+-->
+
+<div class="row bw-row">
+    <div class="col-xs-2 bw-card bw-wit">Wedstrijd:</div>
+    <div class="col-xs-5 bw-card bw-wit">&nbsp;</div>
+    <div class="col-xs-2 bw-card bw-wit">Vorm:</div>
+    <div class="col-xs-3 bw-card bw-wit">&nbsp;</div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-2 bw-card bw-wit">Datum:</div>
+  <div class="col-xs-5 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-2 bw-card bw-wit">Starttijd:</div>
+  <div class="col-xs-3 bw-card bw-wit">&nbsp;</div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-2 bw-card bw-wit">Speler:</div>
+  <div class="col-xs-5 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-2 bw-card bw-wit">hcp:</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">slagen</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-2 bw-card bw-wit">Marker:</div>
+  <div class="col-xs-5 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-2 bw-card bw-wit">hcp:</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">slagen</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+</div>
+<HR>
+<div class="row bw-row">
+  <div class="col-xs-6 bw-card bw-wit bw-oostwoud"><h6>OOSTWOUD (A-lus)</h6></div>
+  <div class="col-xs-1 bw-card bw-green"><h6>&nbsp;</h6></div>
+  <div class="col-xs-2 bw-card bw-green"><h6>Speler</h6></div>
+  <div class="col-xs-2 bw-card bw-green"><h6>Marker</h6></div>
+  <div class="col-xs-1 bw-card bw-green"><h6>&nbsp;</h6></div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">Hole</div>
+  <div class="col-xs-1 bw-card bw-green">Par</div>
+  <div class="col-xs-2 bw-card bw-green">Meter</div>
+  <div class="col-xs-2 bw-card bw-green">Meter</div>
+  <div class="col-xs-1 bw-card bw-green">S.I.</div>
+  <div class="col-xs-1 bw-card bw-green">Score</div>
+  <div class="col-xs-1 bw-card bw-green">Pnt</div>
+  <div class="col-xs-1 bw-card bw-green">Score</div>
+  <div class="col-xs-1 bw-card bw-green">Pnt</div>
+  <div class="col-xs-1 bw-card bw-green">Rem</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 1-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">1</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">369</div>
+  <div class="col-xs-1 bw-card bw-geel">348</div>
+  <div class="col-xs-1 bw-card bw-blauw">322</div>
+  <div class="col-xs-1 bw-card bw-rood">306</div>
+  <div class="col-xs-1 bw-card bw-green">14</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div> 
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 2-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">2</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">279</div>
+  <div class="col-xs-1 bw-card bw-geel">268</div>
+  <div class="col-xs-1 bw-card bw-blauw">244</div>
+  <div class="col-xs-1 bw-card bw-rood">230</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 3-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">3</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">350</div>
+  <div class="col-xs-1 bw-card bw-geel">337</div>
+  <div class="col-xs-1 bw-card bw-blauw">305</div>
+  <div class="col-xs-1 bw-card bw-rood">286</div>
+  <div class="col-xs-1 bw-card bw-green">12</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 4-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-green">5</div>
+  <div class="col-xs-1 bw-card bw-wit">146</div>
+  <div class="col-xs-1 bw-card bw-geel">132</div>
+  <div class="col-xs-1 bw-card bw-blauw">132</div>
+  <div class="col-xs-1 bw-card bw-rood">116</div>
+  <div class="col-xs-1 bw-card bw-green">16</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 5-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">5</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">369</div>
+  <div class="col-xs-1 bw-card bw-geel">354</div>
+  <div class="col-xs-1 bw-card bw-blauw">329</div>
+  <div class="col-xs-1 bw-card bw-rood">308</div>
+  <div class="col-xs-1 bw-card bw-green">6</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 6-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">6</div>
+  <div class="col-xs-1 bw-card bw-green">3</div>
+  <div class="col-xs-1 bw-card bw-wit">179</div>
+  <div class="col-xs-1 bw-card bw-geel">156</div>
+  <div class="col-xs-1 bw-card bw-blauw">156</div>
+  <div class="col-xs-1 bw-card bw-rood">136</div>
+  <div class="col-xs-1 bw-card bw-green">8</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 7-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">7</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">285</div>
+  <div class="col-xs-1 bw-card bw-geel">269</div>
+  <div class="col-xs-1 bw-card bw-blauw">250</div>
+  <div class="col-xs-1 bw-card bw-rood">236</div>
+  <div class="col-xs-1 bw-card bw-green">18</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 8-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">8</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">361</div>
+  <div class="col-xs-1 bw-card bw-geel">353</div>
+  <div class="col-xs-1 bw-card bw-blauw">331</div>
+  <div class="col-xs-1 bw-card bw-rood">297</div>
+  <div class="col-xs-1 bw-card bw-green">2</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS HOLE 9-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">9</div>
+  <div class="col-xs-1 bw-card bw-green">5</div>
+  <div class="col-xs-1 bw-card bw-wit">472</div>
+  <div class="col-xs-1 bw-card bw-geel">458</div>
+  <div class="col-xs-1 bw-card bw-blauw">413</div>
+  <div class="col-xs-1 bw-card bw-rood">384</div>
+  <div class="col-xs-1 bw-card bw-green">10</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--OOSTWOUD A-LUS END-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">uit/in</div>
+  <div class="col-xs-1 bw-card bw-green">35</div>
+  <div class="col-xs-1 bw-card bw-wit">2810</div>
+  <div class="col-xs-1 bw-card bw-geel">2675</div>
+  <div class="col-xs-1 bw-card bw-blauw">2482</div>
+  <div class="col-xs-1 bw-card bw-rood">2299</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<HR>
+ <!--ZUIDWOUD B-LUS-->
+ <div class="container-fluid">
+    <p>9 holes</p> 
+	<p>18 holes</p> 
+	<p>Score</p> 
+
+
+<div class="row bw-row">
+  <div class="col-xs-4 bw-card bw-wit">Handtekening speler:</div>
+  <div class="col-xs-8 bw-card bw-wit">&nbsp;</div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-4 bw-card bw-wit">Lidcode:</div>
+  <div class="col-xs-8 bw-card bw-wit">&nbsp;</div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-4 bw-card bw-wit">Handtekening marker:</div>
+  <div class="col-xs-8 bw-card bw-wit">&nbsp;</div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-4 bw-card bw-wit">Lidcode:</div>
+  <div class="col-xs-8 bw-card bw-wit">&nbsp;</div>
+</div>
+<HR>
+<div class="row bw-row">
+  <div class="col-xs-6 bw-card bw-wit bw-card bw-zuidwoud"><h6>ZUIDWOUD (B-lus)</h6></div>
+  <div class="col-xs-1 bw-card bw-green"><h6>&nbsp;</h6></div>
+  <div class="col-xs-2 bw-card bw-green"><h6>Speler</h6></div>
+  <div class="col-xs-2 bw-card bw-green"><h6>Marker</h6></div>
+  <div class="col-xs-1 bw-card bw-green"><h6>&nbsp;</h6></div>
+</div>
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">Hole</div>
+  <div class="col-xs-1 bw-card bw-green">Par</div>
+  <div class="col-xs-2 bw-card bw-green">Meter</div>
+  <div class="col-xs-2 bw-card bw-green">Meter</div>
+  <div class="col-xs-1 bw-card bw-green">S.I.</div>
+  <div class="col-xs-1 bw-card bw-green">Score</div>
+  <div class="col-xs-1 bw-card bw-green">Pnt</div>
+  <div class="col-xs-1 bw-card bw-green">Score</div>
+  <div class="col-xs-1 bw-card bw-green">Pnt</div>
+  <div class="col-xs-1 bw-card bw-green">Rem</div>
+</div>
+<!--ZUIDWOUD B-LUS HOLE 1-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">1</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">380</div>
+  <div class="col-xs-1 bw-card bw-geel">367</div>
+  <div class="col-xs-1 bw-card bw-blauw">324</div>
+  <div class="col-xs-1 bw-card bw-rood">301</div>
+  <div class="col-xs-1 bw-card bw-green">1</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div> 
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+
+<!--ZUIDWOUD B-LUS HOLE 2-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">2</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">342</div>
+  <div class="col-xs-1 bw-card bw-geel">319</div>
+  <div class="col-xs-1 bw-card bw-blauw">290</div>
+  <div class="col-xs-1 bw-card bw-rood">265</div>
+  <div class="col-xs-1 bw-card bw-green">11</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--ZUIDWOUD B-LUS HOLE 3-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">3</div>
+  <div class="col-xs-1 bw-card bw-green">3</div>
+  <div class="col-xs-1 bw-card bw-wit">160</div>
+  <div class="col-xs-1 bw-card bw-geel">150</div>
+  <div class="col-xs-1 bw-card bw-blauw">135</div>
+  <div class="col-xs-1 bw-card bw-rood">122</div>
+  <div class="col-xs-1 bw-card bw-green">15</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--ZUIDWOUD B-LUS HOLE 4-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">394</div>
+  <div class="col-xs-1 bw-card bw-geel">371</div>
+  <div class="col-xs-1 bw-card bw-blauw">343</div>
+  <div class="col-xs-1 bw-card bw-rood">319</div>
+  <div class="col-xs-1 bw-card bw-green">7</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--ZUIDWOUD B-LUS HOLE 5-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">5</div>
+  <div class="col-xs-1 bw-card bw-green">3</div>
+  <div class="col-xs-1 bw-card bw-wit">188</div>
+  <div class="col-xs-1 bw-card bw-geel">170</div>
+  <div class="col-xs-1 bw-card bw-blauw">152</div>
+  <div class="col-xs-1 bw-card bw-rood">138</div>
+  <div class="col-xs-1 bw-card bw-green">3</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--ZUIDWOUD B-LUS HOLE 6-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">6</div>
+  <div class="col-xs-1 bw-card bw-green">5</div>
+  <div class="col-xs-1 bw-card bw-wit">462</div>
+  <div class="col-xs-1 bw-card bw-geel">442</div>
+  <div class="col-xs-1 bw-card bw-blauw">403</div>
+  <div class="col-xs-1 bw-card bw-rood">376</div>
+  <div class="col-xs-1 bw-card bw-green">17</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--ZUIDWOUD B-LUS HOLE 7-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">7</div>
+  <div class="col-xs-1 bw-card bw-green">5</div>
+  <div class="col-xs-1 bw-card bw-wit">505</div>
+  <div class="col-xs-1 bw-card bw-geel">481</div>
+  <div class="col-xs-1 bw-card bw-blauw">441</div>
+  <div class="col-xs-1 bw-card bw-rood">401</div>
+  <div class="col-xs-1 bw-card bw-green">13</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+
+<!--ZUIDWOUD B-LUS HOLE 8-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">8</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">394</div>
+  <div class="col-xs-1 bw-card bw-geel">376</div>
+  <div class="col-xs-1 bw-card bw-blauw">343</div>
+  <div class="col-xs-1 bw-card bw-rood">317</div>
+  <div class="col-xs-1 bw-card bw-green">9</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+
+<!--ZUIDWOUD B-LUS HOLE 9-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">9</div>
+  <div class="col-xs-1 bw-card bw-green">4</div>
+  <div class="col-xs-1 bw-card bw-wit">374</div>
+  <div class="col-xs-1 bw-card bw-geel">358</div>
+  <div class="col-xs-1 bw-card bw-blauw">326</div>
+  <div class="col-xs-1 bw-card bw-rood">295</div>
+  <div class="col-xs-1 bw-card bw-green">5</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+<!--B-LUS END-->
+<div class="row bw-row">
+  <div class="col-xs-1 bw-card bw-green">uit/in</div>
+  <div class="col-xs-1 bw-card bw-green">36</div>
+  <div class="col-xs-1 bw-card bw-wit">3199</div>
+  <div class="col-xs-1 bw-card bw-geel">3034</div>
+  <div class="col-xs-1 bw-card bw-blauw">2757</div>
+  <div class="col-xs-1 bw-card bw-rood">2534</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-wit">&nbsp;</div>
+  <div class="col-xs-1 bw-card bw-green">&nbsp;</div>
+</div>
+  
+ <HR>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+  integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"
+  integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" 
+      integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+<!-- Stack the columns on mobile by making one full-width and the other half-width 
+<div class="row">
+  <div class="col-xs-12 col-xs-8">.col-xs-12 .col-xs-8</div>
+  <div class="col-xs-6 col-xs-4">.col-xs-6 .col-xs-4</div>
+</div>-->
