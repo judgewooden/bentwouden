@@ -1,0 +1,62 @@
+/*.card-1*/
+.bw-green {
+    position: relative;
+    display: block;
+    background-color: #dfd;
+	padding:2.25em;	
+	border-style:solid;
+    border-width:thin;
+	border-color: #08c;
+}
+/*card-3*/	
+.bw-wit {
+    position: relative;
+    display: block;
+    background-color: #fff;
+	padding:2.25em;	
+	border-style:solid;
+    border-width:thin;
+	border-color: #08c;
+}
+/*.card-4*/
+.bw-geel {
+    position: relative;
+    display: block;
+    background-color: #fe0;
+	padding:2.25em;
+	border-style:solid;
+    border-width:thin;
+	border-color: #08c;
+}
+/*.card-5*/
+.bw-blauw {
+    position: relative;
+    display: block;
+    background-color: #6ad;
+	padding:2.25em;
+	border-style:solid;
+    border-width:thin;
+	border-color: #08c;
+}
+/*.card-6*/
+.bw-rood {
+    position: relative;
+    display: block;
+    background-color: #f75;
+	padding:2.25em;
+	border-style:solid;
+    border-width:thin;
+	border-color: #08c;
+}
+
+/* deze heb ik (nog) niet in gebruik
+.card-7 {
+    position: relative;
+    display: block;
+    background-color: #dfd;
+	padding:2.25em;
+	border-style:solid;
+    border-width:thin;
+	border-color: #08c;
+}
+*/
